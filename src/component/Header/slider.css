@@ -1,0 +1,64 @@
+.Intro {
+  margin: 0 130px;
+  display: flex;
+  justify-content: center;
+}
+.Swiper .swiper-button-next,
+.Swiper .swiper-button-prev {
+  color: #0ca7ea;
+  background-image: url("../../assets/img/arrow.png");
+  background-color: #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.7s ease;
+}
+.Swiper .swiper-button-next:hover,
+.Swiper .swiper-button-prev:hover {
+  background-color: #ffa723;
+  background-image: url("../../assets/img/arrowWhite.png");
+}
+.Swiper .swiper-button-prev {
+  left: 130px !important;
+}
+.Swiper .swiper-button-next:after,
+.Swiper .swiper-button-prev:after {
+  max-width: 80% !important;
+  font-size: 25px;
+  content: "";
+}
+.homeLeft {
+  padding: 0 46px;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.homeLeft h1 {
+  max-width: 370px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 68px;
+  color: #ffffff;
+  margin-bottom: 57px;
+}
+.homeLeft button {
+  padding: 10px 32px;
+  border: 1px solid #5fceff;
+  background: #5fceff;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+.Swiper .swiper-button-next {
+  right: 130px !important;
+  transform: rotate(-180deg);
+}

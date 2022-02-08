@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'font';
+    src: url(./assets/font/font.7d2c7b58.woff);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'font';
+    text-decoration: none;
+    list-style: none;
+}
