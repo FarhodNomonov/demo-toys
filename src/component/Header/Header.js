@@ -41,10 +41,11 @@ function Header() {
           <div className="headerMuted">
             <div className="muted">
               <Muted />
-              <audio
+              <autoPlay
                 src="/music/music.mp3"
-                autoPlay
+                autoPlay={true}
                 volume={volume}
+                onPlay={volume}
               />
             </div>
             <div className="slidecontainer">
