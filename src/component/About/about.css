@@ -65,14 +65,14 @@
 .aboutImg img {
     width: 100%;
 
-    animation: aboutImg 4s infinite alternate-reverse;
+    animation: aboutImg 3s infinite alternate-reverse;
   }
 @keyframes aboutImg {
     0% {
         transform: translateY(-70px);
     }
     100% {
-        transform: translateY(100px);
+        transform: translateY(70px);
     }
 }
 
