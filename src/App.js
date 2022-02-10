@@ -5,12 +5,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./component/Header/Home";
 import HeaderBottom from "./component/Header/HeaderBottom";
 import Products from "./component/Products/Products";
+import About from "./component/About/About";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
         <Products />
+        <About />
         <Routes>
           <Route path="/" element={"<App />"} />
           <Route path="/home" element={'home'} />

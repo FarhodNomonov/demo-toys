@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import ReactAudioPlayer from "react-audio-player";
 import "./header.css";
@@ -11,9 +11,20 @@ function Header() {
   const changer = (e) => {
     setVolume(e.target.value / 100);
   };
+
+
   return (
     <div className="header">
       <header>
+        <ReactAudioPlayer
+          src="https://www.fesliyanstudios.com/musicfiles/2019-05-04_-_I_Was_Joking_-_David_Fesliyan.mp3"
+          autoPlay={true}
+          volume={volume}
+          onPlay={(e) => console.log("onPlay")}
+          onAbort={(e) => console.log("onAbort")}
+          onError={(e) => console.log("onError ")}
+        />
+
         <div className="headerLogo">
           <img src="/img/logo.png" alt="" />
         </div>
@@ -41,12 +52,6 @@ function Header() {
           <div className="headerMuted">
             <div className="muted">
               <Muted />
-              <autoPlay
-                src="/music/music.mp3"
-                autoPlay={true}
-                volume={volume}
-                onPlay={volume}
-              />
             </div>
             <div className="slidecontainer">
               <input
