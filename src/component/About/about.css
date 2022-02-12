@@ -24,18 +24,19 @@
   margin-bottom: 23px;
 }
 .aboutText h1 {
+  width: min-content;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 40px;
   color: #05a1e4;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 10.1vw;
 }
 .aboutText h1::after {
   content: "";
   position: absolute;
-  left: 6%;
+  left: 11%;
   width: 60px;
   height: 2px;
   background: #ffa723;

@@ -6,6 +6,7 @@ import Home from "./component/Header/Home";
 import HeaderBottom from "./component/Header/HeaderBottom";
 import Products from "./component/Products/Products";
 import About from "./component/About/About";
+import Cards from "./component/Cards/Cards";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Products />
         <About />
+        <Cards />
         <Routes>
           <Route path="/" element={"<App />"} />
           <Route path="/home" element={'home'} />
