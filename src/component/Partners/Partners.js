@@ -1,4 +1,5 @@
 import React from "react";
+import './partnes.css'
 
 function Partners() {
   return (

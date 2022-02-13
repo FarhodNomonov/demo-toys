@@ -1,17 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ReactAudioPlayer from "react-audio-player";
 import "./header.css";
 import { Muted, Call } from "../Svg";
-import Home from "./Home";
-import HeaderBottom from "./HeaderBottom";
 
 function Header() {
   const [volume, setVolume] = useState(0);
   const changer = (e) => {
     setVolume(e.target.value / 100);
   };
-
 
   return (
     <div className="header">
@@ -30,22 +27,37 @@ function Header() {
         </div>
         <ul>
           <li>
-            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/">
+              <span>Home</span>
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/products">Products</NavLink>
+            <NavLink to="/products">
+              <span>Products</span>
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about">
+              <span>About</span>
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/Showroom">Showroom</NavLink>
+            <NavLink to="/#Showroom" className={"no_active"}>
+              {" "}
+              <span>Showroom</span>{" "}
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/Partner">Partner</NavLink>
+            <NavLink to="/#Partner" className={"no_active"}>
+              {" "}
+              <span>Partner</span>{" "}
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/Contact">Contact</NavLink>
+            <NavLink to="/#Contact" className={"no_active"}>
+              {" "}
+              <span>Contact</span>{" "}
+            </NavLink>
           </li>
         </ul>
         <div className="headerControl">
@@ -77,8 +89,6 @@ function Header() {
           </div>
         </div>
       </header>
-      <Home />
-      <HeaderBottom />
     </div>
   );
 }

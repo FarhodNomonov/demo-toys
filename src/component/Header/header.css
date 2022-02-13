@@ -19,6 +19,33 @@ header ul a {
   font-size: 12px;
   line-height: 14px;
   color: #ffffff;
+  position: relative;
+
+}
+header ul a::after {
+  content: '';
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: absolute;
+  top: -1200%;
+  left: -50%;
+  width: 200%;
+  height: 732%;
+  background: #FFA723;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+header ul a span {
+  z-index: 55;
+  position: relative;
+}
+header ul a.active::after {
+  top: -432%;
+}
+header ul a.no_active::after {
+  top: -1200%;
+}
+header ul a.no_active:active::after {
+  top: -432%;
 }
 .headerCall {
   display: flex;

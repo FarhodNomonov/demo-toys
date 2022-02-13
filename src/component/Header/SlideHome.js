@@ -1,11 +1,11 @@
 import React from "react";
-import { saveAs } from "file-saver";
 import Slider from "./Slider";
 import "./slider.css";
-import { Dowload } from "./../Svg";
-function Home() {
+import { Dowload } from "../Svg";
+
+function SlideHome() {
   return (
-    <div className="home">
+    <div className="home header">
       <Slider />
       <div className="dowloadCard">
         <a href="/img/pdf.pdf" download='pdf'>
@@ -19,4 +19,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default SlideHome;
