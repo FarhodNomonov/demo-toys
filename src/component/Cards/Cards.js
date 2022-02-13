@@ -21,13 +21,13 @@ function Cards() {
       name: "Экспортирумый государство",
     },
   ];
-  const rendom =  Math.floor(Math.random() * 6);
+  const rendom =  Math.floor(Math.random() * 4);
   return (
     <>
       <div className="cards">
         <div className="cardsText">
           <p>инфографика</p>
-          <h1>Мы в числах</h1>
+          <h1>Cтатистика в цифрах</h1>
         </div>
         <div className="cardsMain">
           {Card.map((data, index) => {
@@ -38,6 +38,9 @@ function Cards() {
               </div>
             );
           })}
+        </div>
+        <div className="cardsTextBottom">
+          <p>С момента основания компании прошло 13 лет. В компании работает более 100 специалистов. На сегодняшний день. Компания производит более 350 видов игрушек и экспортирует их более чем в 7 стран мира </p>
         </div>
       </div>
     </>

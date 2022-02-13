@@ -12,15 +12,15 @@ export default function Slide() {
     },
     {
       img: "/img/produc2.png",
-      title: "Игрушки для уморазвития",
+      title: "Игрушка для девчонок",
     },
     {
       img: "/img/produc4.png",
-      title: "Игрушки для уморазвития",
+      title: "Конструкторы",
     },
     {
       img: "/img/produc3.png",
-      title: "Игрушки для уморазвития",
+      title: "Машинки и модели",
     },
     {
       img: "/img/produc4.png",

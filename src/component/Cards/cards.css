@@ -1,5 +1,6 @@
 .cards {
   padding: 50px 100px;
+  background: #f9fdff;
 }
 .cardsText p {
   font-style: normal;
@@ -59,9 +60,9 @@
   width: 170px;
 }
 .card {
-    animation: card_animation calc(var(--i) * 1s) linear infinite;
-    -webkit-animation: card_animation calc(var(--i) * 1s) linear infinite;
-  }
+  animation: card_animation calc(var(--i) * 2s) linear infinite;
+  -webkit-animation: card_animation calc(var(--i) * 1s) linear infinite;
+}
 
 @keyframes card_animation {
   0% {
@@ -85,4 +86,15 @@
     -ms-transform: translateY(-30px);
     -o-transform: translateY(-30px);
   }
+}
+.cardsTextBottom p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  color: #a6dcf9;
+  width: 835px;
+  margin: auto;
+  margin-top: 82px;
 }

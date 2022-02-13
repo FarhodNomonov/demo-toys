@@ -11,14 +11,9 @@ function About() {
       </div>
       <div className="aboutText">
         <p>о нас</p>
-        <h1>Cамый лучший производителть </h1>
+        <h1>Cамый лучший производитель </h1>
         <span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-          purus sit amet luctus venenatis, lectus magnafringilla urna, porttitor
-          rhoncus dolor purus non enim praesent elementum facilisis leo, vel
-          fringilla est Lorem ipsum dolor sit amet, consectetur adipiscing elit
-          ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla
-          urna, porttitor.{" "}
+        Компания была основана в 2009 году и сейчас производит сотни игрушек. Компания производит различные виды пластиковых игрушек для детей, а также экспортирует их по всему миру. Игрушки изготовлены из высококачественного пластика с использованием современных технологий
         </span>
         <div className="aboutTextBtn">
           <button>
