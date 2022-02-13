@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,16 +16,20 @@ export default function App() {
       img: "/img/kamaz2.png",
     },
     {
-        name: "Safe and attractive",
-        img: "/img/kamaz3.png",
-      }
+      name: "Safe and attractive",
+      img: "/img/kamaz3.png",
+    },
   ];
   return (
     <>
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper Swiper" >
-        {SlideData.map((data,index) => {
+      <Swiper
+        navigation={true}
+        modules={[Navigation]}
+        className="mySwiper Swiper"
+      >
+        {SlideData.map((data, index) => {
           return (
-            <SwiperSlide  key={index}>
+            <SwiperSlide key={index}>
               <div className="Intro">
                 <div className="homeLeft">
                   <h1>{data?.name}</h1>

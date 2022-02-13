@@ -8,8 +8,8 @@ function SlideHome() {
     <div className="home header">
       <Slider />
       <div className="dowloadCard">
-        <a href="/img/pdf.pdf" download='pdf'>
-          <button>
+        <a href="/img/pdf.pdf" download="pdf">
+          <button style={{ cursor: "pointer" }}>
             <Dowload />
             Скачать каталог
           </button>

@@ -1,27 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import ReactAudioPlayer from "react-audio-player";
 import "./header.css";
-import { Muted, Call } from "../Svg";
+import { Muted, Call, Sound, SoundLow } from "../Svg";
+import Music from "./music/music.mp3";
 
 function Header() {
+  const audioPlayer = useRef();
   const [volume, setVolume] = useState(0);
-  const changer = (e) => {
-    setVolume(e.target.value / 100);
+  const [Playing, setPlaying] = useState("n");
+
+  const Play = () => {
+    if (volume === 0) {
+      audioPlayer.current.volume = 100 / 100;
+    } else {
+      audioPlayer.current.volume = volume / 100;
+    }
+    audioPlayer.current.play();
+  };
+  const pause = () => {
+    setPlaying("n");
+    audioPlayer.current.pause();
   };
 
   return (
     <div className="header">
+      <audio src={Music} ref={audioPlayer} />
       <header>
-        <ReactAudioPlayer
-          src="https://www.fesliyanstudios.com/musicfiles/2019-05-04_-_I_Was_Joking_-_David_Fesliyan.mp3"
-          autoPlay={true}
-          volume={volume}
-          onPlay={(e) => console.log("onPlay")}
-          onAbort={(e) => console.log("onAbort")}
-          onError={(e) => console.log("onError ")}
-        />
-
         <div className="headerLogo">
           <img src="/img/logo.png" alt="" />
         </div>
@@ -43,42 +47,72 @@ function Header() {
           </li>
           <li>
             <NavLink to="/#Showroom" className={"no_active"}>
-              {" "}
-              <span>Showroom</span>{" "}
+              <span>Showroom</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="/#Partner" className={"no_active"}>
-              {" "}
-              <span>Partner</span>{" "}
+              <span>Partner</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="/#Contact" className={"no_active"}>
-              {" "}
-              <span>Contact</span>{" "}
+              <span>Contact</span>
             </NavLink>
           </li>
         </ul>
         <div className="headerControl">
           <div className="headerMuted">
-            <div className="muted">
-              <Muted />
+            <div
+              className="muted"
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                if (Playing === "s" || Playing === "l") {
+                  setPlaying("n");
+                  pause();
+                }
+                if (Playing === "n") {
+                  setPlaying("s");
+                  Play();
+                }
+              }}
+            >
+              {Playing === "n" && <Muted />}
+              {Playing === "s" && <Sound />}
+              {Playing === "l" && <SoundLow />}
             </div>
             <div className="slidecontainer">
               <input
                 type="range"
                 min="0"
                 max="100"
-                defaultValue="50"
+                defaultValue={volume}
                 className="slider"
                 id="myRange"
-                onChange={changer}
+                onChange={(e) => {
+                  if (e.target.value > 5) {
+                    Play(e.target.value, 10);
+                    setPlaying("l");
+                  }
+                  if (e.target.value < 5) {
+                    pause();
+                    setPlaying("n");
+                  }
+                  if (e.target.value > 70) {
+                    setVolume(parseInt(e.target.value, 10));
+                    Play(e.target.value, 10);
+                    setPlaying("s");
+                  }
+                }}
               />
             </div>
           </div>
           <div className="language">
-            <select name="" id="">
+            <select
+              name=""
+              id=""
+              style={{ cursor: "pointer", outline: "none" }}
+            >
               <option value="Ru">Ru</option>
               <option value="Uz">Uz</option>
             </select>
