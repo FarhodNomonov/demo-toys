@@ -71,7 +71,11 @@ header ul a.no_active:active::after {
   align-items: center;
 }
 .muted {
-  padding: 8px 10px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #5fceff;
   border-radius: 5px;
 }
