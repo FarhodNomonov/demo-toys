@@ -1,8 +1,11 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+
 
 export default function Slide() {
   const Slide = [
@@ -27,6 +30,10 @@ export default function Slide() {
       title: "Игрушки для уморазвития",
     },
   ];
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       <Swiper
@@ -42,11 +49,15 @@ export default function Slide() {
         {Slide.map((data, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="slideImem productsCard">
+              <div
+                className="slideImem productsCard"
+                data-aos="fade-up"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 <div className="productsCard">
                   <img src={data?.img} alt="" />
                 </div>
-                
               </div>
               <p>{data?.title}</p>
             </SwiperSlide>
