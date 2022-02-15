@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <div className="header">
-      <audio src={Music} ref={audioPlayer} />
+      <audio src={Music} volume={volume} ref={audioPlayer} />
       <header>
         <div className="headerLogo">
           <img src="/img/logo.png" alt="" />
