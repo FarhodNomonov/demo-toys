@@ -10,11 +10,7 @@ function Header() {
   const [Playing, setPlaying] = useState("n");
 
   const Play = () => {
-    if (volume === 0) {
-      audioPlayer.current.volume = 100 / 100;
-    } else {
-      audioPlayer.current.volume = volume / 100;
-    }
+    audioPlayer.current.volume = volume / 100;
     audioPlayer.current.play();
   };
   const pause = () => {
@@ -90,17 +86,15 @@ function Header() {
                 className="slider"
                 id="myRange"
                 onChange={(e) => {
-                  if (e.target.value > 5) {
-                    Play(e.target.value, 10);
-                    setPlaying("l");
-                  }
-                  if (e.target.value < 5) {
-                    pause();
+                  Play(e.target.value,  10);
+                  setVolume(parseInt(e.target.value, 10));
+                  if (volume < 1) {
                     setPlaying("n");
                   }
-                  if (e.target.value > 70) {
-                    setVolume(parseInt(e.target.value, 10));
-                    Play(e.target.value, 10);
+                  if (volume > 1) {
+                    setPlaying("l");
+                  }
+                  if (volume > 50) {
                     setPlaying("s");
                   }
                 }}
