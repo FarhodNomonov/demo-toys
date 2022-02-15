@@ -111,10 +111,10 @@ function Header() {
               <option value="Uz">Uz</option>
             </select>
           </div>
-          <div className="headerCall">
+          <a href="tel:90 1312000" className="headerCall btn">
             <Call />
             <p>90 1312000</p>
-          </div>
+          </a>
         </div>
       </header>
     </div>

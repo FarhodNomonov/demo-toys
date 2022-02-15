@@ -33,7 +33,7 @@ export default function App() {
               <div className="Intro">
                 <div className="homeLeft">
                   <h1>{data?.name}</h1>
-                  <button>
+                  <button className="btn">
                     подробнее <Arrow />
                   </button>
                 </div>
