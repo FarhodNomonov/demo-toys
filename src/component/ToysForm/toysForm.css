@@ -1,0 +1,19 @@
+.toys_form {
+  margin-top: 200px;
+  padding: 100px;
+  background: #0aa3e4;
+}
+.form_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form_title h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #ffffff;
+}

@@ -5,7 +5,7 @@
 }
 .partnersText::after {
   position: absolute;
-  top: -15px;
+  top: 80px;
   left: 0;
   width: 100%;
   height: 150px;
@@ -13,4 +13,28 @@
   background-image: url(/public/img/ProductsBg.png);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.partnersText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.partnersText p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffbf60;
+  margin-bottom: 10px;
+}
+.partnersText h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #05a1e4;
 }

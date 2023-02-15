@@ -1,0 +1,8 @@
+.partner_slide {
+    padding: 0 50px;
+}
+.partner_slide .partner_slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

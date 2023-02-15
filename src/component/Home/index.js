@@ -5,6 +5,8 @@ import Cards from "./../Cards/Cards";
 import Partners from "./../Partners/Partners";
 import SlideHome from './../Header/SlideHome';
 import HeaderBottom from './../Header/HeaderBottom';
+import PartnerSlider from "../PartnerSlider";
+import ToysForm from "../ToysForm";
 
 function Home() {
   return (
@@ -15,8 +17,10 @@ function Home() {
       <About />
       <Cards />
       <Partners />
+      <PartnerSlider />
+      <ToysForm />
     </>
-  );
+  )
 }
 
 export default Home;

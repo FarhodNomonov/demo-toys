@@ -1,41 +1,34 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+import "./partnerSlider.css"
 
-
-export default function Slide() {
+function PartnerSlider() {
   const Slide = [
     {
-      img: "/img/produc1.png",
+      img: "/img/partnerSlide1.png",
       title: "Игрушки для уморазвития",
     },
     {
-      img: "/img/produc2.png",
+      img: "/img/partnerSlide2.png",
       title: "Игрушка для девчонок",
     },
     {
-      img: "/img/produc4.png",
+      img: "/img/partnerSlide3.png",
       title: "Конструкторы",
     },
     {
-      img: "/img/produc3.png",
+      img: "/img/partnerSlide1.png",
       title: "Машинки и модели",
     },
     {
-      img: "/img/produc4.png",
+      img: "/img/partnerSlide1.png",
       title: "Игрушки для уморазвития",
     },
   ];
-  React.useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
   return (
-    <>
+    <div className="partner_slide">
       <Swiper
         slidesPerView={4}
         slidesPerGroup={1}
@@ -50,20 +43,21 @@ export default function Slide() {
           return (
             <SwiperSlide key={index}>
               <div
-                className="slideImem productsCard"
+                className="slideImem partner_slide"
                 data-aos="fade-up"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine"
               >
-                <div className="productsCard">
+                <div className="">
                   <img src={data?.img} alt="" />
                 </div>
               </div>
-              <p>{data?.title}</p>
             </SwiperSlide>
           );
         })}
       </Swiper>
-    </>
+    </div>
   );
 }
+
+export default PartnerSlider;
