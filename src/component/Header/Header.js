@@ -42,17 +42,17 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/#Showroom" className={"no_active"}>
+            <NavLink to="/Showroom" className={"no_active"}>
               <span>Showroom</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/#Partner" className={"no_active"}>
+            <NavLink to="/Partner" className={"no_active"}>
               <span>Partner</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/#Contact" className={"no_active"}>
+            <NavLink to="/Contact" className={"no_active"}>
               <span>Contact</span>
             </NavLink>
           </li>

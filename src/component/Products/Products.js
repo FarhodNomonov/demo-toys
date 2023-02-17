@@ -7,7 +7,6 @@ function Products() {
     <div className="products">
       <div
         className="ProductsText"
-       
       >
         <p>категория</p>
         <h1>Продукты</h1>
